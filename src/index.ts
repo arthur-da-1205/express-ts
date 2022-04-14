@@ -28,7 +28,7 @@ class App {
       res.send("Ini routes menggunakan TS");
     });
 
-    this.app.use("/users", UserRoutes);
+    this.app.use("/api/v1/users", UserRoutes);
   };
 }
 

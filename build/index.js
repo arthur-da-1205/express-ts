@@ -23,7 +23,7 @@ class App {
             this.app.route("/").get((req, res) => {
                 res.send("Ini routes menggunakan TS");
             });
-            this.app.use("/users", UserRoutes_1.default);
+            this.app.use("/api/v1/users", UserRoutes_1.default);
         };
         this.app = (0, express_1.default)();
         this.plugins();

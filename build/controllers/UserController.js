@@ -20,10 +20,16 @@ class UserController {
             return res.send(person);
         };
         this.update = (req, res) => {
-            throw new Error("Method not implemented");
+            const { id } = req.params;
+            const { name } = req.body;
+            let person = dataUsers.find((item) => item.id == id);
+            person.name = name;
+            return res.send("Update Success");
         };
         this.delete = (req, res) => {
-            throw new Error("Method not implemented");
+            const { id } = req.params;
+            let people = dataUsers.filter((item) => item.id != id);
+            return res.send(people);
         };
     }
 }
