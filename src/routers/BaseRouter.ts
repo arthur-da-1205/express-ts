@@ -3,13 +3,12 @@ import IRouter from "./RouterInterface";
 
 abstract class BaseRouter implements IRouter {
   public router: Router;
+  public routes = (): void => {};
 
   constructor() {
     this.router = Router();
     this.routes();
   }
-
-  abstract routes(): void;
 }
 
 export default BaseRouter;
